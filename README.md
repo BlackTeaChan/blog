@@ -21,3 +21,12 @@
     ```
     npm install hexo-lazyload-image --save
     ```
+    站点配置文件：
+    ```
+    # 图片懒加载
+    lazyload:
+    enable: true
+    # 是否仅文章中的图片做懒加载
+    onlypost: false
+    loadingImg: /images/xxx.png
+    ```
