@@ -17,3 +17,7 @@
     ```
     npm install hexo-generator-searchdb --save
     ```
+1. 图片懒加载
+    ```
+    npm install hexo-lazyload-image --save
+    ```
