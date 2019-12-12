@@ -4,3 +4,4 @@ db.json
 *.log
 .deploy*/
 themes/next
+/.idea/
