@@ -1,4 +1,8 @@
 #安装
+1. 安装Hexo
+	```
+	npm install -g hexo-cli
+	```
 
 1. Live2d插件 
     ```
