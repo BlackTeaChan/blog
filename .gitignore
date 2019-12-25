@@ -1,8 +1,10 @@
 .DS_Store
 Thumbs.db
-db.json
 *.log
 .deploy*/
 themes/next
 /.idea/
+
 node_modules/
+db.json
+package-lock.json
