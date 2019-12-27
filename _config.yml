@@ -6,14 +6,14 @@
 title: 陈红茶的博客
 subtitle: 'BlackTeaChan&apos;s Blog'
 description: '一只捡垃圾的码农'
-keywords: 陈宏察,陈红茶,BlackTeaChan
+keywords: 陈红茶,BlackTeaChan,陈宏察,Java,Android,软件
 author: 陈红茶
 language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blackteachan.com
+url: https://blackteachan.com
 root: /
 permalink: :year/:month/:day/:en_title/
 permalink_defaults:
