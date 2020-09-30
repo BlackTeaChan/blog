@@ -2,6 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>想念你</title>
     <style>
         body{
@@ -35,25 +36,47 @@
     </style>
 </head>
 <body>
-    <div id="div-before-text" class="div-center">已经想了丫头</div>
+    <div id="div-before-text" class="div-center hide">我的行动和想法总是相反，我也曾想过和你共度一生，但是我怕又会重蹈覆辙，我怕我的种种会伤害你。</div>
     <div id="div-time" class="div-center"></div>
-    <div id="div-toast" class="div-center hide">巨想你</div>
+    <div id="div-toast" class="div-center hide">原本只想给自己一个念想，奈何被你发现了</div>
+    <div id="div-local" class="hide"></div>
+    <!-- <iframe id="iframe" class="" src="http://whois.pconline.com.cn/ip.jsp"></iframe> -->
 </body>
+<script type="text/javascript" src="http://whois.pconline.com.cn/ip.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 <script>
 
-    let mIntervalTime = 1000;
-    let mStartTime = 1598889600000;
+    var mIntervalTime = 1000;
+    var mStartTime = 1598889600000;
 
     $(document).ready(function(){
 
-        updateTime();
-        setInterval(updateTime, mIntervalTime);
-
+        // updateTime();
+        // setInterval(updateTime, mIntervalTime);
+        
+        /*$.ajax({
+    		url: "https://api.ipify.org",
+    		url: "http://pv.sohu.com/cityjson?ie=utf",
+    		type: "post",
+    		success: function(res){
+    			console.log(res);
+    			var ip = res;
+    			labelIp('div-local', ip);
+    		}
+    	});*/
+    	setInterval(function(){
+    		//var local = $("#div-local").html();
+    		var local = returnCitySN.cname;
+			if(local.indexOf("浙江") != -1){
+				$("#div-before-text").html("我的行动和想法总是相反，我也曾想过和你共度一生，但是我怕又会重蹈覆辙，我怕我的种种会伤害你。无论如何，你都是我最爱的那个范莎莎，爱你的陈浩留。");
+				$("#div-before-text").removeClass("hide");
+			}
+    	}, 1000);
     });
 
     $(document).on("click", function(){
-        toast();
+        // toast();
     });
 
     function updateTime(){
