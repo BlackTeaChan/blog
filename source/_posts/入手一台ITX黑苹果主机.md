@@ -4,11 +4,12 @@ en_title: 入手一台ITX黑苹果主机
 date: 2020-03-16 00:14:15
 categories: 
 - 硬件
-- 黑苹果
+- PC
 tags: 
 - 硬件
 - 黑苹果
-- 小主机
+- PC
+- ITX
 keywords: ITX,黑苹果,小主机
 ---
 
