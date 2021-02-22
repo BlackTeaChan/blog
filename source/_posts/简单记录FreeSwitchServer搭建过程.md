@@ -38,6 +38,12 @@ Windows系统可以直接使用安装包进行安装，本次使用的是最新�
 下载好安装包，只需按照默认选项安装即可，安装类型建议选择**[Complete]**
 ![Windows下载页面](Windows安装界面.png)
 
+## 启动
+1. 使用`freeswitch -nc`命令后台启动FreeSwitch
+启动后会输出对应的进程ID
+![启动FreeSwitch](启动FreeSwitch.png)
+2. 使用`fs_cli -rRS`来访问FreeSwitch
+
 ## 使用
 ### 常用命令
 ```
@@ -66,11 +72,21 @@ Windows系统可以直接使用安装包进行安装，本次使用的是最新�
 -htdocs [htdocsdir]     -- 指定其它 HTTP 根⽬录
 -scripts [scriptsdir]   -- 指定其它脚本⽬录
 ```
-## 启动
-1. 使用`freeswitch -nc`命令后台启动FreeSwitch
-启动后会输出对应的进程ID
-![启动FreeSwitch](启动FreeSwitch.png)
-2. 使用`fs_cli -rRS`来访问FreeSwitch
+### 添加用户
+1. 前往目录`/usr/local/freeswitch/conf/directory/default`  
+   创建`用户ID.xml`文件（可以直接复制1000.xml，替换1000为用户ID）
+2. 找到以下文件
+   ```
+   /usr/local/freeswitch/conf/dialplan/default.xml
+   /usr/local/freeswitch/conf/dialplan/public.xml
+   ```
+   修改文件内的正则表达式内
+   ```
+   <!-- 修改前 -->
+   expression="^(10[01][0-9])$"
+   <!-- 修改后（添加用户1234） -->
+   expression="^(10[01][0-9]|1234)$"
+   ```
 
 # 安装FSGUI
 ## 说明
